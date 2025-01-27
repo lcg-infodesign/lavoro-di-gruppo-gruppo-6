@@ -1,8 +1,50 @@
-html, body {
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: 'Aeion';
+    src: url('../FONT/AeionMono-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
 }
 
-canvas {
-  display: block;
+@font-face {
+    font-family: 'Aeion';
+    src: url('../FONT/AeionMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Aeion';
+    src: url('../FONT/AeionMono-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeion';
+    src: url('../FONT/AeionMono-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeion';
+    src: url('../FONT/AeionMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeion';
+    src: url('../FONT/AeionMono-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    display: block;
+  }
