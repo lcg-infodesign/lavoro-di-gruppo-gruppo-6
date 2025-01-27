@@ -220,8 +220,8 @@ function mousePressed() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  if (gestoreMappa) {
-    gestoreMappa.ridimensiona(windowWidth, windowHeight);
+  if (gestoreMappa && gestoreMappa.gestoreEsagoni) {
+    gestoreMappa.gestoreEsagoni.ridimensiona(windowWidth, windowHeight);
   }
   if (gestoreSvg) {
     gestoreSvg.ridimensiona(windowWidth, windowHeight);
