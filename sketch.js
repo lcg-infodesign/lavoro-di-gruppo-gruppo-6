@@ -35,7 +35,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  const width = Math.max(window.innerWidth, document.documentElement.clientWidth);
+  const height = Math.max(window.innerHeight, document.documentElement.clientHeight);
+  createCanvas(width, height);
   inizializzaGestori();
   legenda = new Legenda(fontLegenda);
 }
@@ -220,11 +222,17 @@ function mousePressed() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  if (gestoreMappa && gestoreMappa.gestoreEsagoni) {
-    gestoreMappa.gestoreEsagoni.ridimensiona(windowWidth, windowHeight);
-  }
-  if (gestoreSvg) {
-    gestoreSvg.ridimensiona(windowWidth, windowHeight);
+  
+  try {
+    if (gestoreMappa?.gestoreEsagoni?.ridimensiona) {
+      gestoreMappa.gestoreEsagoni.ridimensiona(windowWidth, windowHeight);
+    }
+    
+    if (gestoreSvg?.ridimensiona) {
+      gestoreSvg.ridimensiona(windowWidth, windowHeight);
+    }
+  } catch (error) {
+    console.error('Errore durante il ridimensionamento:', error);
   }
 }
 
